@@ -1,0 +1,23 @@
+
+*** These modified files were found in JOE when it aborted on Fri Jan 10 11:59:30 2025
+*** JOE was aborted because the terminal closed
+
+*** File '/albedo/home/emehdipo/python/gap-filling/.git/MERGE_MSG'
+Merge branch 'main' of https://github.com/EhsanMehdipour/PFT_gapfilling
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit
+*** File '(Unnamed)'
+:wq
+
+*** File '(Unnamed)'
+* Build Log *
+/albedo/home/emehdipo/python/gap-filling/.git/MERGE_MSG
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc
