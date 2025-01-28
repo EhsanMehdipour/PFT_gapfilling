@@ -3,7 +3,7 @@ import numpy as np
 params = {
     # Path to the input and output directory
     'work_dir':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/CMEMS/',
-    'data_dir':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/CMEMS/data/*',
+    'data_dir':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/CMEMS/data',
     'sst_file':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/GHRSST/METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2_2016_2019.nc',
     'output_dir':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/CMEMS/regions',
 
