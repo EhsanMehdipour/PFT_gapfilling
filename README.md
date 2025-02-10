@@ -14,9 +14,7 @@ You can connect the environment to JupyterLab using:
 ```
 python -m ipykernel install --user --name=PFT_gapfilling --display-name "PFT_gapfilling"
 ```
-For type II regression in matchup analysis use the following package. The installation is explained in the package.
-
-https://github.com/OceanOptics/pylr2
+For type II regression in matchup analysis use [pylr2](https://github.com/OceanOptics/pylr2). The installation is explained in the package or directly use pip and git:
 ```
 pip install git+https://github.com/OceanOptics/pylr2.git
 ```
