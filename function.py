@@ -59,5 +59,37 @@ def unc_transform(ds_unc_rel):
     ds_unc_sd = np.log10((ds_unc_rel/100)+1)
     return ds_unc_sd
 
+# Function to compute RMSE
 def RMSE(ds):
     return np.sqrt(np.nanmean(np.square(ds)))
+
+# FUnction to create a folder if it does not exist
+def create_folder_if_not_exists(folder_path):
+    '''
+    Function to create a folder if it does not exist
+    
+    Parameters:
+    folder_path (str): path to the directory to be created.
+    
+    Returns:
+    None
+    '''
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+# Function to remove a boundry from a dataset after reconstruction to remove the boundry effect
+def rm_boundry(ds, pixels=5):
+    return ds.isel(lat=slice(pixels, -pixels), lon=slice(pixels, -pixels))
+
+# Custom formatter function
+def custom_log_format(x, pos):
+    if x < 0.001:
+        return '{:.4f}'.format(x)
+    elif x < 0.01:
+        return '{:.3f}'.format(x)
+    elif x < 0.1:
+        return '{:.2f}'.format(x)
+    elif x < 1:
+        return '{:.1f}'.format(x)
+    else:
+        return '{:.0f}'.format(x)
