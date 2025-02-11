@@ -6,7 +6,7 @@ params = {
     'data_dir':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/CMEMS/data',
     'sst_file':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/GHRSST/METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2_2016_2019.nc',
     'output_dir':'/albedo/work/projects/p_phytooptics/emehdipo/PS113/CMEMS/regions',
-    'fig_dir': '/fig',
+    'fig_dir': 'fig',
 
     # The initial and final date to consider for the gap-filling
     'start_date' : np.datetime64('2016-04-25'),

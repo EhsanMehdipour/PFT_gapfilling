@@ -2,8 +2,8 @@
 **Objective:** This repository provides the necessary scripts for conducting and analysing two well-established satellite gap-filling methods, DINEOF and DINCAE, for gap-filling of total chlorophyll-a (TChla) and chlorophyll-a concentrations of five major PFT datasets provided by Copernicus Marine Service.
 
 **Project:** Assessment of gap-filling techniques applied to satellite phytoplankton composition products for the Atlantic Ocean
-
-![Time-series of Diatom](fig/timeserie_DIATO_area2.png)
+![Gradient-filed](fig/gradient_field_area10_2018-06-23.png)
+![Time-series of Diatom](fig/timeserie_DIATO_area10.png)
 
 ## Requirements:
 ### Models:
