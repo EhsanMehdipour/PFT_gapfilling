@@ -1,3 +1,26 @@
+'''
+**Project**
+
+Assessment of gap-filling techniques applied to satellite phytoplankton composition products for the Atlantic Ocean
+
+**Credit**
+
+**© Ehsan Mehdipour**, 2025. (ehsan.mehdipour@awi.de)
+
+Alfred Wegener Insitute for Polar and Marine Research, Bremerhaven, Germany
+
+This work is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.  
+
+**Objective**
+
+This code creates a random initialization (init) file for DINEOF.
+
+**Dataset**
+
+The dataset is accessable through Copernicus Marine Service with the following DOI:
+https://doi.org/10.48670/moi-00280 and Dataset ID: cmems_obs-oc_glo_bgc-plankton_my_l3-multi-4km_P1D
+'''
+
 ## Import modules
 
 import os
