@@ -2,7 +2,9 @@
 **Objective:** This repository provides the necessary scripts for conducting and analysing two well-established satellite gap-filling methods, DINEOF and DINCAE, for gap-filling of total chlorophyll-a (TChla) and chlorophyll-a concentrations of five major PFT datasets provided by Copernicus Marine Service.
 
 **Project:** Assessment of gap-filling techniques applied to satellite phytoplankton composition products for the Atlantic Ocean
+
 ![Gradient-filed](fig/gradient_field_area10_2018-06-23.png)
+
 ![Time-series of Diatom](fig/timeserie_DIATO_area10.png)
 
 ## Requirements:
@@ -34,5 +36,13 @@ You can connect the environment to JupyterLab using:
 python -m ipykernel install --user --name=PFT_gapfilling --display-name "PFT_gapfilling"
 ```
 ## Execute
-All the necessary parameters for running all the scripts are stored in the [**params.py**](params.py) file.
+All the necessary parameters for running all the scripts are stored in the [**params.py**](params.py) file. You can define the regions of interest (ROI) by changing the [**data/regions.csv**](data/regions.csv) file for defining different regions.
 
+
+**Credit**
+
+**© Ehsan Mehdipour**, 2025. (ehsan.mehdipour@awi.de)
+
+Alfred Wegener Insitute for Polar and Marine Research, Bremerhaven, Germany
+
+This work is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. 

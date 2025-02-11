@@ -1,3 +1,17 @@
+'''
+**Project**
+
+Assessment of gap-filling techniques applied to satellite phytoplankton composition products for the Atlantic Ocean
+
+**Credit**
+
+**© Ehsan Mehdipour**, 2025. (ehsan.mehdipour@awi.de)
+
+Alfred Wegener Insitute for Polar and Marine Research, Bremerhaven, Germany
+
+This work is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. 
+'''
+
 import numpy as np
 
 # Function to Create distributed client for local mid-level computation and parallalization with DASK
