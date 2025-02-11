@@ -8,9 +8,9 @@ This repository provides the necessary scripts for conducting and analysing two 
 ## Datasets:
 **PFT**: [PFT](https://doi.org/10.48670/moi-00280) Dataset ID: cmems_obs-oc_glo_bgc-plankton_my_l3-multi-4km_P1D
 
-**SST**: [sst](https://doi.org/10.48670/moi-00165) Dataset ID: METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2
+**SST**: [SST](https://doi.org/10.48670/moi-00165) Dataset ID: METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2
 
-# Installation
+## Modules
 Use Mamba or Conda for installation of necessary packages
 ```
 mamba create --name PFT_gapfilling -c conda-forge --file requirements.txt
@@ -23,7 +23,7 @@ conda create --name PFT_gapfilling -c conda-forge --file requirements.txt
 ```
 pip install git+https://github.com/OceanOptics/pylr2.git
 ```
-## Interactive Environment
+### Interactive Environment
 You can connect the environment to JupyterLab using:
 ```
 python -m ipykernel install --user --name=PFT_gapfilling --display-name "PFT_gapfilling"
