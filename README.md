@@ -5,13 +5,12 @@
 
 ## Requirements:
 ### Models:
-**DINEOF:** [DINEOF](https://github.com/aida-alvera/DINEOF)
-
-**DINCAE:** [DINCAE](https://github.com/gher-uliege/DINCAE.jl)
+[**DINEOF**](https://github.com/aida-alvera/DINEOF)
+[**DINCAE**](https://github.com/gher-uliege/DINCAE.jl)
 ### Datasets:
-**PFT:** [PFT](https://doi.org/10.48670/moi-00280) Dataset ID: cmems_obs-oc_glo_bgc-plankton_my_l3-multi-4km_P1D
+[**PFT**](https://doi.org/10.48670/moi-00280) Dataset ID: cmems_obs-oc_glo_bgc-plankton_my_l3-multi-4km_P1D
 
-**SST:** [SST](https://doi.org/10.48670/moi-00165) Dataset ID: METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2
+[**SST**](https://doi.org/10.48670/moi-00165) Dataset ID: METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2
 
 ### Installation:
 Use Mamba or Conda for installation of necessary packages
