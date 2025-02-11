@@ -3,6 +3,8 @@
 
 **Project:** Assessment of gap-filling techniques applied to satellite phytoplankton composition products for the Atlantic Ocean
 
+![Time-series of Diatom](fig/timeserie_DIATO_area2.png)
+
 ## Requirements:
 ### Models:
 [**DINEOF**](https://github.com/aida-alvera/DINEOF)
