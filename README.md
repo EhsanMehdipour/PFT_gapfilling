@@ -31,4 +31,6 @@ You can connect the environment to JupyterLab using:
 ```
 python -m ipykernel install --user --name=PFT_gapfilling --display-name "PFT_gapfilling"
 ```
+## Execute
+All the necessary parameters for running all the scripts are stored in the [**param.py**](param.py) file.
 
