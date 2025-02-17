@@ -13,11 +13,12 @@ This work is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 '''
 
 import numpy as np
+import os
+from dask_jobqueue import SLURMCluster
+from dask.distributed import Client
 
 # Function to Create distributed client for local mid-level computation and parallalization with DASK
 def dask_distributed_client(n_workers=8, threads_per_worker=None):
-    from dask.distributed import Client
-
     if threads_per_worker==None:
         client = Client(n_workers=8)
         
@@ -28,9 +29,6 @@ def dask_distributed_client(n_workers=8, threads_per_worker=None):
 
 # Function to Create SLURM Cluster for heavy computation and parallalization with DASK
 def dask_slurm_cluster(queue='smp', cores=32, scale=40, **kwargs):
-    import os
-    from dask_jobqueue import SLURMCluster
-    from dask.distributed import Client
     
     # Create log folder if it doesn't exist
     folder_name = "./log"

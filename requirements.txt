@@ -10,3 +10,4 @@ scipy
 ipykernel
 netcdf4
 h5netcdf
+dask-jobqueue
