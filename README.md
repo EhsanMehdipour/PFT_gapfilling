@@ -40,18 +40,18 @@ All the necessary parameters for running all the scripts are stored in the [**pa
 A brief introduction to all the scripts:
 
 
-*1_1_preprocessing (input_analysis).ipynb:* Analysis the PFT satellite dataset for missing rate and uncertainty.
-*1_2_preprocessing (data_partitioning).ipynb:* Partitioning the data into training, validation and test datasets.
-*2_1_processing (DINCAE_random_search).jl:* Setting in Julia for random hyperparameters search for DINCAE gap-filling method.
-*2_2_processing (DINCAE_random_search).sh:* SLURM parallelization of DINCAE random hyperparameter search to several HPC nodes.
-*2_3_processing (DINEOF_random_search).py:* Setting in Python for random hyperparameters search for DINEOF gap-filling method.
-*2_4_processing (DINEOF_random_search).sh:* SLURM parallelization of DINEOF hyperparameter random search to several HPC nodes.
-*2_5_processing (DINCAE_loss_function).ipynb:* Visualisation of the DINCAE loss function progress
-*3_1_processing (DINCAE_final).jl:* Optimal reconstruction run setting in Julia for DINCAE gap-filling method.
-*3_2_processing (DINCAE_final).sh:* SLURM parallelization of DINCAE optimal reconstruction of different areas to several HPC nodes.
-*3_3_processing (DINEOF_final).py:* Optimal reconstruction run setting in Python for DINEOF gap-filling method.
-*3_4_processing (DINEOF_final).sh:* SLURM parallelization of DINEOF optimal reconstruction of different areas to several HPC nodes.
-*4_1_postprocessing (cross_validation_DINCAE).ipynb:* 
+- *1_1_preprocessing (input_analysis).ipynb:* Analysis the PFT satellite dataset for missing rate and uncertainty.
+- *1_2_preprocessing (data_partitioning).ipynb:* Partitioning the data into training, validation and test datasets.
+- *2_1_processing (DINCAE_random_search).jl:* Setting in Julia for random hyperparameters search for DINCAE gap-filling method.
+- *2_2_processing (DINCAE_random_search).sh:* SLURM parallelization of DINCAE random hyperparameter search to several HPC nodes.
+- *2_3_processing (DINEOF_random_search).py:* Setting in Python for random hyperparameters search for DINEOF gap-filling method.
+- *2_4_processing (DINEOF_random_search).sh:* SLURM parallelization of DINEOF hyperparameter random search to several HPC nodes.
+- *2_5_processing (DINCAE_loss_function).ipynb:* Visualisation of the DINCAE loss function progress
+- *3_1_processing (DINCAE_final).jl:* Optimal reconstruction run setting in Julia for DINCAE gap-filling method.
+- *3_2_processing (DINCAE_final).sh:* SLURM parallelization of DINCAE optimal reconstruction of different areas to several HPC nodes.
+- *3_3_processing (DINEOF_final).py:* Optimal reconstruction run setting in Python for DINEOF gap-filling method.
+- *3_4_processing (DINEOF_final).sh:* SLURM parallelization of DINEOF optimal reconstruction of different areas to several HPC nodes.
+- *4_1_postprocessing (cross_validation_DINCAE).ipynb:* 
 
 ## Credit
 
