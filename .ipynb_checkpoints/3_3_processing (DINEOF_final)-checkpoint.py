@@ -28,7 +28,6 @@ import math
 import random
 import argparse
 import json
-from function import create_folder_if_not_exists
 from params import params
 
 ## parse the configuration from them SLURM file
@@ -83,7 +82,7 @@ cloud_index = os.path.join(working_dir,'cloud_index_train.nc')
 
 ## Output
 reconstuct_dir = os.path.join(working_dir,'DINEOF',experiment)
-create_folder_if_not_exists(reconstuct_dir)
+os.makedirs(reconstuct_dir, exist_ok=True)
 output_file = os.path.join(working_dir,'ds_reconstructed')
 EOF_dir = reconstuct_dir
 

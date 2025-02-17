@@ -17,91 +17,115 @@ import os
 from dask_jobqueue import SLURMCluster
 from dask.distributed import Client
 
-# Function to Create distributed client for local mid-level computation and parallalization with DASK
 def dask_distributed_client(n_workers=8, threads_per_worker=None):
-    if threads_per_worker==None:
-        client = Client(n_workers=8)
-        
-    else:
-        client = Client(n_workers=8, threads_per_worker=1)
+    '''
+    Function to create a distributed Dask client for local computation and parallelization.
     
-    return client
+    Parameters:
+    n_workers (int): Number of workers in the distributed cluster.
+    threads_per_worker (int, optional): Number of threads per worker. Defaults to None.
+    
+    Returns:
+    Client: A Dask distributed client instance.
+    '''
+    
+    kwargs = {"n_workers": n_workers}
+    if threads_per_worker is not None:
+        kwargs["threads_per_worker"] = threads_per_worker
+    
+    return Client(**kwargs)
 
-# Function to Create SLURM Cluster for heavy computation and parallalization with DASK
-def dask_slurm_cluster(queue='smp', cores=32, scale=40, **kwargs):
+def dask_slurm_cluster(queue='smp', cores=32, scale=40, memory='60GB', walltime='00:30:00', account=None, **kwargs):
+    '''
+    Function to create a job queue with SLURMCluster for heavy computation and parallelization with DASK.
+
+    Parameters:
+    queue (str): SLURM queue type (e.g., 'smp' or 'mpp').
+    cores (int): Number of cores allocated to each cluster.
+    scale (int): Number of workers to scale the cluster to.
+    memory (str): Memory allocation per worker (default: '60GB').
+    walltime (str): Maximum walltime per worker (default: '00:30:00').
+    account (str, optional): SLURM account name. If None, it won't be explicitly set.
     
-    # Create log folder if it doesn't exist
-    folder_name = "./log"
-    os.makedirs(folder_name, exist_ok=True)
+    Returns:
+    tuple: (SLURMCluster, Client)
+    '''
     
-    # Additional SLURMCluster keyword arguments
+    # Create log directory if it does not exist
+    log_dir = "./log"
+    os.makedirs(log_dir, exist_ok=True)
+    
+    # Construct SLURM cluster arguments
     cluster_kwargs = {
-        'queue': queue,  # SLURM queue name
-        'account': "oze.oze",  # SLURM account name
+        'queue': queue,
         'cores': cores,
         'processes': 1,
-        'walltime': '00:30:00',  # Walltime for SLURM job
-        'memory': '60GB',
+        'memory': memory,
+        'walltime': walltime,
         'interface': 'ib0',
         'local_directory': '/tmp/',
         'job_extra_directives': [
-            "--qos 30min",  # Quality of Service for SLURM job
-            "-o ./log/dask-worker-%j.log",  # Output log file for workers
-            "-e ./log/dask-worker-%j.err",  # Error log file for workers
-            "--export=OMP_NUM_THREADS=1"  # Environment variable export
+            "--qos=30min",
+            f"-o {log_dir}/dask-worker-%j.log",
+            f"-e {log_dir}/dask-worker-%j.err",
+            "--export=OMP_NUM_THREADS=1"
         ],
-        **kwargs  # Unpack additional keyword arguments
+        **kwargs  # Allow additional SLURMCluster options
     }
-    
-    # Configure SLURMCluster
+
+    # Include account if provided
+    if account:
+        cluster_kwargs["account"] = account
+
+    # Create SLURM cluster
     cluster = SLURMCluster(**cluster_kwargs)
-    
-    # Scale the cluster
-    cluster.scale(scale)
-    
-    # Connect client to the cluster
+
+    # Scale the cluster if requested
+    if scale:
+        cluster.scale(scale)
+
+    # Create client
     client = Client(cluster)
     
-    # Return both cluster and client
     return cluster, client
 
 
-# Function to convert the relative 
 def unc_transform(ds_unc_rel):
+    '''
+    Function to convert the relative satellite uncertainty 
+    to standard deviation in logarithmic scale
+    
+    Parameters:
+    ds_unc_rel (xr.Dataset): Dataset containing relative uncertainty
+    
+    Returns:
+    ds_unc_sd (xr.Dataset): Standard deviation uncertainty in logarithmic scale
+    '''
     ds_unc_sd = np.log10((ds_unc_rel/100)+1)
     return ds_unc_sd
 
-# Function to compute RMSE
 def RMSE(ds):
-    return np.sqrt(np.nanmean(np.square(ds)))
-
-# FUnction to create a folder if it does not exist
-def create_folder_if_not_exists(folder_path):
     '''
-    Function to create a folder if it does not exist
+    Compute the root-mean-squared-error of Dataset
     
     Parameters:
-    folder_path (str): path to the directory to be created.
+    ds (xr.Dataset): dataset to compute the RMSE 
     
     Returns:
-    None
+    ds (xr.Dataset): RMSE dataset
     '''
-    if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+    return np.sqrt(np.nanmean(np.square(ds)))
 
-# Function to remove a boundry from a dataset after reconstruction to remove the boundry effect
 def rm_boundry(ds, pixels=5):
+    '''
+    Function to remove a boundry from a dataset after reconstruction to remove the boundry effect
+    
+    Parameters:
+    ds (xr.Dataset): Dataset from which to remove the boundry
+    pixels (int): Number of pixels to be removed from the all the sides of the dataset
+    
+    Returns:
+    ds (xr.Dataset): Dataset with removed boundry effect
+    '''
+    
     return ds.isel(lat=slice(pixels, -pixels), lon=slice(pixels, -pixels))
-
-# Custom formatter function
-def custom_log_format(x, pos):
-    if x < 0.001:
-        return '{:.4f}'.format(x)
-    elif x < 0.01:
-        return '{:.3f}'.format(x)
-    elif x < 0.1:
-        return '{:.2f}'.format(x)
-    elif x < 1:
-        return '{:.1f}'.format(x)
-    else:
-        return '{:.0f}'.format(x)
