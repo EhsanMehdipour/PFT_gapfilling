@@ -39,11 +39,11 @@ python -m ipykernel install --user --name=PFT_gapfilling --display-name "PFT_gap
 All the necessary parameters for running all the scripts are stored in the [**params.py**](params.py) file. You can define the regions of interest (ROI) by changing the [**data/regions.csv**](data/regions.csv) file for defining different regions. The data pipeline is described in the corresponding publication.
 A brief introduction to all the scripts:
 
-- *params.py:* Dictionary containing all necessary directories and parameters.
-- *function.py:* Extra functions used in several scripts.
-- *1_1_preprocessing (input_analysis).ipynb:* Analysis the PFT satellite dataset for missing rate and uncertainty.
-- *1_2_preprocessing (data_partitioning).ipynb:* Partitioning the data into training, validation and test datasets.
-- *2_1_processing (DINCAE_random_search).jl:* Setting in Julia for random hyperparameters search for DINCAE gap-filling method.
+- **params.py:** Dictionary containing all necessary directories and parameters.
+- **function.py:** Extra functions used in several scripts.
+- **1_1_preprocessing (input_analysis).ipynb:** Analysis the PFT satellite dataset for missing rate and uncertainty.
+- **1_2_preprocessing (data_partitioning).ipynb:** Partitioning the data into training, validation and test datasets.
+- **2_1_processing (DINCAE_random_search).jl:** Setting in Julia for random hyperparameters search for DINCAE gap-filling method.
 - *2_2_processing (DINCAE_random_search).sh:* SLURM parallelization of DINCAE random hyperparameter search to several HPC nodes.
 - *2_3_processing (DINEOF_random_search).py:* Setting in Python for random hyperparameters search for DINEOF gap-filling method.
 - *2_4_processing (DINEOF_random_search).sh:* SLURM parallelization of DINEOF hyperparameter random search to several HPC nodes.
