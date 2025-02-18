@@ -44,23 +44,23 @@ A brief introduction to all the scripts:
 - **1_1_preprocessing (input_analysis).ipynb:** Analysis the PFT satellite dataset for missing rate and uncertainty.
 - **1_2_preprocessing (data_partitioning).ipynb:** Partitioning the data into training, validation and test datasets.
 - **2_1_processing (DINCAE_random_search).jl:** Setting in Julia for random hyperparameters search for DINCAE gap-filling method.
-- *2_2_processing (DINCAE_random_search).sh:* SLURM parallelization of DINCAE random hyperparameter search to several HPC nodes.
-- *2_3_processing (DINEOF_random_search).py:* Setting in Python for random hyperparameters search for DINEOF gap-filling method.
-- *2_4_processing (DINEOF_random_search).sh:* SLURM parallelization of DINEOF hyperparameter random search to several HPC nodes.
-- *2_5_processing (DINCAE_loss_function).ipynb:* Visualisation of the DINCAE loss function progress.
-- *3_1_processing (DINCAE_final).jl:* Optimal reconstruction run setting in Julia for DINCAE gap-filling method.
-- *3_2_processing (DINCAE_final).sh:* SLURM parallelization of DINCAE optimal reconstruction of different areas to several HPC nodes.
-- *3_3_processing (DINEOF_final).py:* Optimal reconstruction run setting in Python for DINEOF gap-filling method.
-- *3_4_processing (DINEOF_final).sh:* SLURM parallelization of DINEOF optimal reconstruction of different areas to several HPC nodes.
-- *4_1_postprocessing (cross_validation_DINCAE).ipynb:* Cross-validation between validation and test dataset with DINCAE gap-filled product.
-- *4_1_postprocessing (cross_validation_DINEOF).ipynb:* Cross-validation between validation and test dataset with DINEOF gap-filled product.
-- *4_2_postprocessing (cross_validation_error_distribution).ipynb:* Plot the spatial distribution of cross-validation error.
-- *5_1_postprocessing (degree_of_smoothing).ipynb:* Compute the degree of smoothing.
-- *5_2_postprocessing (gradient_field).ipynb:* Compute the gradient field using sobel edge detection algorithm.
-- *6_1_postprocessing (validation_merging_regions).ipynb:* Merging the original satellite dataset and gap-filled product by using feathering.
-- *6_2_postprocessing (validation_extract_matchups).ipynb:* Extracting the matchups between in situ measurement and merged satellite products.
-- *6_3_postprocessing (validation_plot_matchups).ipynb:* Independent validation using matchups between in situ measurement and satellite products.
-- *7_1_postprocessing (time-series).ipynb:* Visualisation of the time series of the satellite products.
+- **2_2_processing (DINCAE_random_search).sh:** SLURM parallelization of DINCAE random hyperparameter search to several HPC nodes.
+- **2_3_processing (DINEOF_random_search).py:** Setting in Python for random hyperparameters search for DINEOF gap-filling method.
+- **2_4_processing (DINEOF_random_search).sh:** SLURM parallelization of DINEOF hyperparameter random search to several HPC nodes.
+- **2_5_processing (DINCAE_loss_function).ipynb:** Visualisation of the DINCAE loss function progress.
+- **3_1_processing (DINCAE_final).jl:** Optimal reconstruction run setting in Julia for DINCAE gap-filling method.
+- **3_2_processing (DINCAE_final).sh:** SLURM parallelization of DINCAE optimal reconstruction of different areas to several HPC nodes.
+- **3_3_processing (DINEOF_final).py:** Optimal reconstruction run setting in Python for DINEOF gap-filling method.
+- **3_4_processing (DINEOF_final).sh:** SLURM parallelization of DINEOF optimal reconstruction of different areas to several HPC nodes.
+- **4_1_postprocessing (cross_validation_DINCAE).ipynb:** Cross-validation between validation and test dataset with DINCAE gap-filled product.
+- **4_1_postprocessing (cross_validation_DINEOF).ipynb:** Cross-validation between validation and test dataset with DINEOF gap-filled product.
+- **4_2_postprocessing (cross_validation_error_distribution).ipynb:** Plot the spatial distribution of cross-validation error.
+- **5_1_postprocessing (degree_of_smoothing).ipynb:** Compute the degree of smoothing.
+- **5_2_postprocessing (gradient_field).ipynb:** Compute the gradient field using sobel edge detection algorithm.
+- **6_1_postprocessing (validation_merging_regions).ipynb:** Merging the original satellite dataset and gap-filled product by using feathering.
+- **6_2_postprocessing (validation_extract_matchups).ipynb:** Extracting the matchups between in situ measurement and merged satellite products.
+- **6_3_postprocessing (validation_plot_matchups).ipynb:** Independent validation using matchups between in situ measurement and satellite products.
+- **7_1_postprocessing (time-series).ipynb:** Visualisation of the time series of the satellite products.
 
 ## Credit
 
