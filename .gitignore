@@ -3,3 +3,5 @@ __pycache__/
 data/.ipynb_checkpoints/
 fig/.ipynb_checkpoints/
 log/
+data/all_clusters*
+data/PS113-path*
