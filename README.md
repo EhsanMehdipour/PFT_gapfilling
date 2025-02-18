@@ -17,7 +17,7 @@
 
 [**SST**](https://doi.org/10.48670/moi-00165) Dataset ID: METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2
 
-### Installation
+## Installation
 Use Mamba or Conda for installation of necessary packages
 ```
 mamba create --name PFT_gapfilling -c conda-forge --file requirements.txt
