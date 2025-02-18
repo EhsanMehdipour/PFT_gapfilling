@@ -10,7 +10,7 @@ https://github.com/gher-uliege/DINCAE.jl/blob/main/examples/DINCAE_tutorial.jl
 
 **Objective**
 
-This code creates a final run for DINCAE based on saved configuration.
+This script creates a final run for DINCAE based on saved configuration.
 
 **Dataset**
 

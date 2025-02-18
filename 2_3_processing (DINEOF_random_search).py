@@ -13,7 +13,7 @@ This work is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
 **Objective**
 
-This code creates a random initialization (init) file for DINEOF.
+This script creates a random initialization (init) file for DINEOF.
 
 **Dataset**
 

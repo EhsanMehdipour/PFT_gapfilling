@@ -10,7 +10,7 @@ https://github.com/gher-uliege/DINCAE.jl/blob/main/examples/DINCAE_tutorial.jl
 
 **Objective**
 
-This code creates a random run for DINCAE.
+This script creates a random run for DINCAE.
 
 **Dataset**
 

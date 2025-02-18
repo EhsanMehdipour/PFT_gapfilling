@@ -13,7 +13,7 @@ This work is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
 **Objective**
 
-This code creates a final run for DINEOF based on saved configuration.
+This script creates a final run for DINEOF based on saved configuration.
 
 **Dataset**
 
