@@ -1,0 +1,13 @@
+xarray
+numpy
+pandas
+dask
+geopandas
+matplotlib
+cartopy
+tqdm
+scipy
+ipykernel
+netcdf4
+h5netcdf
+dask-jobqueue
