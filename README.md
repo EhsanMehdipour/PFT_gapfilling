@@ -41,38 +41,47 @@ A brief introduction to the workflow and all the scripts:
 
 ```mermaid
 flowchart TD
-    A1@{shape: cyl, label: "SST
-    satellite product" }
-    %% A1[SST]
-    A2@{shape: cyl, label: "TChla + PFTs 
-    satellite products" }
-    %% A2[TChla+5PFT]
-    A3@{shape: cyl, label: "In situ measurement" }
-    %% A3[In situ]
+    subgraph **Datasets**
+        A1@{shape: cyl, label: "SST
+        satellite product" }
+        %% A1[SST]
+        A2@{shape: cyl, label: "TChla + PFTs 
+        satellite products" }
+        %% A2[TChla+5PFT]
+        A3@{shape: cyl, label: "In situ measurement" }
+        %% A3[In situ]
+    end
 
     A1-->D[Resample]
     A2-->E[Log-transform]
-    D-->F[Merging]
-    E-->F
-    F-->G[ROI extraction]
-    G-->H{Partitioning}
 
-    H-->I1@{shape: cyl, label: "Training dataset"}
-    H-->I2@{shape: cyl, label: "Validation dataset"}
-    H-->I3@{shape: cyl, label: "Test dataset"}
+    subgraph **Preprocessing**
 
+        D-->F[Merging]
+        E-->F
+        F-->G[ROI extraction]
+        G-->H{Partitioning}
+
+        H-->I1@{shape: cyl, label: "Training dataset"}
+        H-->I2@{shape: cyl, label: "Validation dataset"}
+        H-->I3@{shape: cyl, label: "Test dataset"}
+    end
     I1-->J[Gap-filling]
     I2-->J
-
+    subgraph **Processing**
+        J
+    end
     J-->K@{shape: cyl, label: "Reconstructed 
     satellite dataset"}
-    K-->L[Blending]
-    L-->N[Evaluation using 
-    test]
-    K-->M
+    subgraph **Postprocessing**
+        K-->L[Blending]
+        L-->N[Evaluation using 
+        test]
+        K-->M
+        I3-->N
+    end
     A3-->M[Evaluation using 
-    in situ]
-    I3-->N
+        in situ]
 ```
 
 - **params.py:** Dictionary containing all necessary directories and parameters.
