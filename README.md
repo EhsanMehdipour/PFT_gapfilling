@@ -55,7 +55,7 @@ flowchart TD
     F-->G[ROI Extraction]
     G-->H{Partitioning}
 
-    H-->I1@{ shape: cyl, label: "Train dataset"}
+    H-->I1@{ shape: cyl, label: "Training dataset"}
     H-->I2@{ shape: cyl, label: "Validation dataset"}
     H-->I3@{ shape: cyl, label: "Test dataset"}
 
