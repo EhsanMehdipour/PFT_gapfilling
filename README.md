@@ -41,11 +41,12 @@ A brief introduction to the workflow and all the scripts:
 
 ```mermaid
 flowchart TD
-    A1@{ shape: cyl, label: "SST" }
+    A1@{ shape: cyl, label: "SST satellite product" }
     %% A1[SST]
-    A2@{ shape: cyl, label: "TChla+5PFTs" }
+    A2@{ shape: cyl, label: "TChla+5PFTs 
+    satellite product" }
     %% A2[TChla+5PFT]
-    A3@{ shape: cyl, label: "In situ" }
+    A3@{ shape: cyl, label: "In situ measurement" }
     %% A3[In situ]
 
     A1-->D[Resample]
