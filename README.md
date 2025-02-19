@@ -64,7 +64,7 @@ A brief introduction to all the scripts:
 
 ```mermaid
 graph LR;
-  [dataset]-->data_partitioning
+  dataset-->data_partitioning
   data_partitioning-->DINCAE_random_search
 ```
 
