@@ -63,9 +63,9 @@ A brief introduction to all the scripts:
 - **7_1_postprocessing (time-series).ipynb:** Visualisation of the time series of the satellite products.
 
 ```mermaid
-flowchart LR
-[dataset]-->data_partitioning
-data_partitioning-->DINCAE_random_search
+graph LR;
+  [dataset]-->data_partitioning
+  data_partitioning-->DINCAE_random_search
 ```
 
 ## Credit
