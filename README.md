@@ -88,7 +88,10 @@ flowchart TD
 
     J-->K[Reconstructed 
     satellite dataset]
-
+    K-->L[Blending]
+    L-->N[Evaluation using test]
+    K-->M
+    A3-->M[Evaluation using in situ]
 ```
 
 ## Credit
