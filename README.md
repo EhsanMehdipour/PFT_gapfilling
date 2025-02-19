@@ -64,6 +64,7 @@ A brief introduction to all the scripts:
 
 ```Mermaid
 stateDiagram
+  [*] --> data_partitioning
   data_partitioning --> DINCAE_random_search
 ```
 
