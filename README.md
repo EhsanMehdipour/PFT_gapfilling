@@ -45,7 +45,7 @@ flowchart TD
     satellite product" }
     %% A1[SST]
     A2@{shape: cyl, label: "TChla + PFTs 
-    satellite product" }
+    satellite products" }
     %% A2[TChla+5PFT]
     A3@{shape: cyl, label: "In situ measurement" }
     %% A3[In situ]
