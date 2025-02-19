@@ -41,29 +41,29 @@ A brief introduction to the workflow and all the scripts:
 
 ```mermaid
 flowchart TD
-    A1@{ shape: cyl, label: "SST satellite product" }
+    A1@{shape: cyl, label: "SST satellite product" }
     %% A1[SST]
-    A2@{ shape: cyl, label: "TChla + PFTs 
+    A2@{shape: cyl, label: "TChla + PFTs 
     satellite product" }
     %% A2[TChla+5PFT]
-    A3@{ shape: cyl, label: "In situ measurement" }
+    A3@{shape: cyl, label: "In situ measurement" }
     %% A3[In situ]
 
     A1-->D[Resample]
     A2-->E[Log-transform]
     D-->F[Merging]
     E-->F
-    F-->G[ROI Extraction]
+    F-->G[ROI extraction]
     G-->H{Partitioning}
 
-    H-->I1@{ shape: cyl, label: "Training dataset"}
-    H-->I2@{ shape: cyl, label: "Validation dataset"}
-    H-->I3@{ shape: cyl, label: "Test dataset"}
+    H-->I1@{shape: cyl, label: "Training dataset"}
+    H-->I2@{shape: cyl, label: "Validation dataset"}
+    H-->I3@{shape: cyl, label: "Test dataset"}
 
     I1-->J[Gap-filling]
     I2-->J
 
-    J-->K@{ shape: cyl, label: "Reconstructed 
+    J-->K@{shape: cyl, label: "Reconstructed 
     satellite dataset"}
     K-->L[Blending]
     L-->N[Evaluation using 
