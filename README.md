@@ -41,7 +41,8 @@ A brief introduction to the workflow and all the scripts:
 
 ```mermaid
 flowchart TD
-    A1@{shape: cyl, label: "SST satellite product" }
+    A1@{shape: cyl, label: "SST
+    satellite product" }
     %% A1[SST]
     A2@{shape: cyl, label: "TChla + PFTs 
     satellite product" }
