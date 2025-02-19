@@ -64,7 +64,7 @@ A brief introduction to all the scripts:
 
 ```mermaid
 flowchart TD
-    A1[SST]
+    A1[fa:fa-thermometer-quarter SST]
     A2[TChla+5PFT]
     A3[In situ]
 
