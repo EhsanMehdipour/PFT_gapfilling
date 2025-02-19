@@ -62,6 +62,11 @@ A brief introduction to all the scripts:
 - **6_3_postprocessing (validation_plot_matchups).ipynb:** Independent validation using matchups between in situ measurement and satellite products.
 - **7_1_postprocessing (time-series).ipynb:** Visualisation of the time series of the satellite products.
 
+```Mermaid
+stateDiagram
+  data_partitioning --> DINCAE_random_search
+```
+
 ## Credit
 
 **© Ehsan Mehdipour**, 2025. (ehsan.mehdipour@awi.de)
