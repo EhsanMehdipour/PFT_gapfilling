@@ -1,4 +1,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14905369.svg)](https://doi.org/10.5281/zenodo.14905369)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14905558.svg)](https://doi.org/10.5281/zenodo.14905558)
+
 
 # Gapfilling of phytoplankton functional types (PFT)
 **Objective:** This repository contains scripts for implementing and analyzing two well-established satellite gap-filling methods, DINEOF and DINCAE. These methods are applied to fill gaps in total chlorophyll-a (TChla) and chlorophyll-a concentrations for five major phytoplankton functional type (PFT) datasets in the Atlantic Ocean, sourced from the Copernicus Marine Service.
